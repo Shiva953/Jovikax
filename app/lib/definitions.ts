@@ -14,3 +14,23 @@ export type PunForm = {
     id: string;
     pun: string
 };
+
+export type JokeFlags = {
+    nsfw: boolean;
+    religious: boolean;
+    political: boolean;
+    racist: boolean;
+    sexist: boolean;
+    explicit: boolean;
+  };
+  
+ export type Joke = {
+    category: string;
+    type: string;
+    setup: string;
+    delivery: string;
+    flags: JokeFlags;
+    safe: boolean;
+    id: number;
+    lang: string;
+  };
