@@ -1,5 +1,3 @@
-'use client'
-
 import React from "react";
 import Link from "next/link";
 import {Input, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure} from "@nextui-org/react";
