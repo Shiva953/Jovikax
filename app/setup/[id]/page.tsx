@@ -1,9 +1,3 @@
-import {
-    // Card,
-    // CardHeader,
-    // CardBody,
-    // Input,
-  } from "@nextui-org/react";
   import { createPunAndInsertToDB } from "@/app/lib/actions";
   import { fetchSetupbyId } from "@/app/lib/data";
   import PopUpButton from "@/app/ui/modal";
@@ -64,36 +58,3 @@ import { redirect } from "next/navigation";
       </>
     );
   }
-  
-  // export async function setupCard({ setup }: { setup: string }) {
-  //   return (
-  //     <>
-  //       {/* Centering the card */}
-  //       <div className="flex justify-center items-center h-screen">
-  //         <Card className="py-4">
-  //           <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-  //             <h4 className="font-bold text-large text-white">{setup}</h4>
-  //           </CardHeader>
-  //           <CardBody className="py-2"></CardBody>
-  //           <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
-  //             <form action={createPunAndInsertToDB}>
-  //               <label
-  //                 htmlFor="string"
-  //                 className="mb-2 ml-2 block text-sm font-medium text-green-950"
-  //               >
-  //                 Add Pun
-  //               </label>
-  //               <Input
-  //                 name="mainPart"
-  //                 type="text"
-  //                 className="text-black peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
-  //               />
-  //               <Button type="submit">Make The Joke</Button>
-  //             </form>
-  //           </div>
-  //         </Card>
-  //       </div>
-  //     </>
-  //   );
-  // }
-  

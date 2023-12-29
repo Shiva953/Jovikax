@@ -5,7 +5,7 @@ import { Pun } from "@/app/lib/definitions";
 import { CardBody,CardHeader, Avatar,Card } from "@nextui-org/react";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-// import Card from "@mui/material/Card"
+
 export default function PunchList({ puns }: { puns: Pun[] }) {
   return (
     <div className="w-full mt-[-12rem]">
