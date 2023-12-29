@@ -42,7 +42,7 @@ function AuthButton(){
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
                       <DropdownMenuSeparator />
-                      {/* <DropdownMenuItem>
+                      <DropdownMenuItem>
                         {session?.user?.name ? (
                           `@${session?.user?.name}`
                         ) : (
@@ -50,7 +50,7 @@ function AuthButton(){
                             No name set
                           </span>
                         )}
-                      </DropdownMenuItem> */}
+                      </DropdownMenuItem>
                       {/* <DropdownMenuItem>{session?.user?.email}</DropdownMenuItem> */}
                       {/* <DropdownMenuItem>
                         <Link className="h-full w-full" href={`/@${auth.user.username}/settings`}>Settings</Link>
