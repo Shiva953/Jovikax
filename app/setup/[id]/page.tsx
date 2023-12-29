@@ -21,7 +21,7 @@ import { redirect } from "next/navigation";
     const setupId = params.id
     const setup = await fetchSetupbyId(setupId);
     const punId = Math.floor(Math.random()*1000);
-    const punURL = `jovikax.vercel.app/punchline/${punId}`
+    const punURL = `/punchline/${punId}`
     if (!setup) {
       throw new Error("The Setup with this Id was not found.");
     }
