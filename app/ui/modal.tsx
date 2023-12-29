@@ -1,7 +1,9 @@
+'use client'
+
 import React from "react";
 import Link from "next/link";
 import {Input, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure} from "@nextui-org/react";
-
+import { redirect } from "next/navigation";
 export default function PopUpButton({title, linkToPun} : {title:string, linkToPun:string}) {
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
   return (
@@ -16,21 +18,15 @@ export default function PopUpButton({title, linkToPun} : {title:string, linkToPu
                 <p>
                   You can visit the punchline here
                 </p>
-                <Input
-                    isReadOnly
-                    type="link"
-                    variant="bordered"
-                    defaultValue={linkToPun}
-                    className="max-w-xs"
-                    />
+                <Button
+                    variant="solid"
+                    onClick={() => {redirect(linkToPun)}}
+                    className="max-w-xs">Visit Pun</Button>
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
                   Close
                 </Button>
-                <Link href={linkToPun}>
-                    <Button color="primary">Visit Pun</Button>
-                </Link>
               </ModalFooter>
             </>
           )}
