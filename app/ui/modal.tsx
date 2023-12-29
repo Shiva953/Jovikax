@@ -21,7 +21,7 @@ export default function PopUpButton({title, linkToPun} : {title:string, linkToPu
                 <Button
                     variant="solid"
                     onClick={() => {redirect(linkToPun)}}
-                    className="max-w-xs">Visit Pun</Button>
+                    className="max-w-xs"><Link href={linkToPun}>Visit Pun</Link></Button>
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
