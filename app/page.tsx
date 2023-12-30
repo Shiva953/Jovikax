@@ -3,7 +3,6 @@ import { fetchSetupsFromDB, populateDB } from './lib/actions';
 import { Suspense } from 'react';
 
 export default async function Page() {
-  await populateDB();
   const data = await fetchSetupsFromDB()!;
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
