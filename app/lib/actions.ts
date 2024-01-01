@@ -3,8 +3,6 @@
 import { z } from 'zod';
 import { createClient } from '@supabase/supabase-js'
 import { revalidatePath } from 'next/cache';
-import { fetchJokesfromAPI } from './data';
-import { Joke } from './definitions';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
@@ -13,14 +11,6 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 const FormSchema = z.object({
     mainPart: z.string()
   });
-
-export async function populateDB(){
-  const jokes = await fetchJokesfromAPI();
-  const setups = jokes.map((j:Joke) => ({ setup: j.setup, id: j.id}))
-  const {data, error} = await supabase
-  .from('setups')
-  .insert(setups)
-}
 
 export async function fetchSetupsFromDB(){
   try{

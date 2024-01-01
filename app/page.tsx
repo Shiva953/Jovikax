@@ -1,5 +1,5 @@
 import SetupList from '@/app/ui/setup/SetupList';
-import { fetchSetupsFromDB, populateDB } from './lib/actions';
+import { fetchSetupsFromDB } from './lib/actions';
 import { Suspense } from 'react';
 
 export default async function Page() {

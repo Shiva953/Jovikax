@@ -13,7 +13,7 @@ export default function SetupCards({ setups }: { setups: Setup[] }) {
     <>
     <div className="w-full mt-8">
       <h3 className={`md:text-[1.25rem] sm:text-[1rem] lg:text-[1.5rem] text-[1rem] mb-8 font-semibold tracking-tight text-small`}>
-        Makes <span className="text-black">Jokes</span> From These
+        Makes <span className="text-primary shadow">Jokes</span> From These
       </h3>
       <div className="mt-2 flex flex-wrap">
         {/* <Suspense fallback={<div>Loading...</div>}> */}
